@@ -4,18 +4,30 @@ require 'pry'
 
 def get_character_movies_from_api(character_name)
   #make the web request
+<<<<<<< HEAD
+=======
+  character_name= "Luke Skywalker"
+>>>>>>> 365282d48f5bcac7fc383c71525c29cf53e17756
   # response_string = RestClient.get('http://www.swapi.co/api/people/')
   # response_hash = JSON.parse(response_string)
   # iterate over the response hash to find the collection of `films` for the given
   #   `character`
   response_string2=RestClient.get("http://www.swapi.co/api/people/?search=#{character_name}")
   parsed = JSON.parse(response_string2)
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 365282d48f5bcac7fc383c71525c29cf53e17756
   newArr=[]
   allFilms= parsed["results"][0]["films"]
   newArr = newArr + allFilms
 
   newFinalArr=[]
+<<<<<<< HEAD
+=======
+
+>>>>>>> 365282d48f5bcac7fc383c71525c29cf53e17756
   counter = 0 
   while ( counter < newArr.size)
     r= RestClient.get(newArr[counter])
